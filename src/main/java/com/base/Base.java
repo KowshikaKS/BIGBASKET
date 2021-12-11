@@ -65,7 +65,7 @@ public class Base {
 			logger.info("Application Launched succefully");
 		}
 		
-		/*Actions action;
+		Actions action;
 		public void performMouseHower(WebElement element,WebDriver driver) {
 			action=new Actions(driver);
 			action.moveToElement(element).build().perform();
@@ -98,7 +98,7 @@ public class Base {
 				return true;
 			}
 			return false;
-		}*/
+		}
 		
 		
 		

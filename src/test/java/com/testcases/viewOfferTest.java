@@ -1,7 +1,6 @@
 package com.testcases;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -19,7 +18,18 @@ import junit.framework.Assert;
 public class viewOfferTest extends Base {
 	 WebDriver driver;
 	viewOffer page;
-	
+	@BeforeMethod
+	public void launchBrowser()
+	{
+		initializaiton();
+		page=new viewOffer(driver);
+		
+	}
+	@AfterMethod
+	public void closeSetup()
+	{
+		tearDown();
+	}
 	@BeforeTest
 	public void reportSetup()
 	{
@@ -31,16 +41,11 @@ public class viewOfferTest extends Base {
 		closeExtentReportSetup();
 	}
 	@Test
-	public void ViewOffer()
+	public void validateViewOffer()
 	{
-		viewOffer off=new viewOffer(driver);
-		off.clickOffer();
-		off.performMouseHower();
-		off.clearQuant();
-		off.addQuant();
-		off.clickAdd();
 		ExtentTest test = extent.createTest("AddToCart");
-		test.log(Status.PASS, "Validate view offer case passed");
+		Assert.assertTrue(page.validateViewOffer(driver));
+		test.log(Status.FAIL, "Validate view offer case failed");
 		
 	}
 }

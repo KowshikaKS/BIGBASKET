@@ -6,10 +6,10 @@
       <class name="com.base.Base"/>
       <class name="com.testcases.loginpageTest"/>
        <class name="com.testcases.viewOfferTest"/>
-       <!--  <class name="com.testcases.changeLocationTest"/>
+        <class name="com.testcases.changeLocationTest"/>
       <class name="com.testcases.searchTest"/>
       <class name="com.testcases.dealsOfWeekTest"/>
-      <class name="com.testcases.BuyItemTest"/>-->
+      <class name="com.testcases.BuyItemTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
